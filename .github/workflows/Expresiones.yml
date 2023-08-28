@@ -1,0 +1,26 @@
+name: Expresiones Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      edad:
+        description: 'edad'
+        type: integer
+        required: true
+       
+
+jobs:
+  mayor:
+    if: ${{input.edad >= 18}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Some Task
+        run: |
+          echo "es mayor o igual a 18"
+  menor:
+    if: ${{input.edad < 18}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Some Task
+        run: |
+          echo "es MENOR  a 18"
+          
