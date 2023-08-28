@@ -10,14 +10,14 @@ on:
 
 jobs:
   mayor:
-    if: ${{input.edad >= 18}}
+    if: ${{inputs.edad >= 18}}
     runs-on: ubuntu-latest
     steps:
       - name: Run Some Task
         run: |
           echo "es mayor o igual a 18"
   menor:
-    if: ${{input.edad < 18}}
+    if: ${{inputs.edad < 18}}
     runs-on: ubuntu-latest
     steps:
       - name: Run Some Task
